@@ -2,7 +2,3 @@ pyjwt==1.7.1
 flask==1.1.2
 gunicorn==20.0.4
 pytest==6.2.2
-
-
-export TOKEN=`curl -d '{"email":"<EMAIL>","password":"<PASSWORD>"}' -H "Content-Type: application/json" -X POST a8bc399fcf2514aa1afc67cc748c00f0-893690719.us-east-2.elb.amazonaws.com/auth  | jq -r '.token'`
-curl --request GET 'a8bc399fcf2514aa1afc67cc748c00f0-893690719.us-east-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq 
